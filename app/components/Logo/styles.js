@@ -4,23 +4,28 @@ import EStyleSheet from 'react-native-extended-stylesheet'
 const imageWidth = Dimensions.get('window').width / 2
 
 export default EStyleSheet.create({
+    $largeContainerSize: imageWidth,
+    $largeImageSize: imageWidth / 2,
+    $smallContainerSize: imageWidth / 2,
+    $smallImageSize: imageWidth / 4,
+
     container: {
         alignItems: 'center',
     },
     containerImage: {
         alignItems: 'center',
         justifyContent: 'center',
-        width: imageWidth,
-        height: imageWidth
+        width: '$largeContainerSize',
+        height: '$largeContainerSize'
     },
     image: {
-        width: imageWidth / 2,
+        width: '$largeImageSize',
     },
     text: {
         color: '$white',
         fontWeight: '600',
         fontSize: 28,
         letterSpacing: -0.5,
-        marginTop: 15
+        marginTop: 15,
     }
 })
