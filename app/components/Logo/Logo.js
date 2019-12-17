@@ -80,7 +80,7 @@ class Logo extends Component {
         const imageStyles = [
             styles.logo,
             { width: imageWidth },
-            tintColor ? { tintColor } : null,
+            this.props.tintColor ? { tintColor: this.props.tintColor } : null,
         ];
 
         return (
